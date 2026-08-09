@@ -1,0 +1,59 @@
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ==================== Ambientes virtuais ====================
+.venv/
+venv/
+env/
+.conda/
+.mamba/
+
+# ==================== Variáveis de ambiente ====================
+.env
+.env.*
+!.env.example
+
+# ==================== VSCode ====================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ==================== Pylint / ferramentas de lint ====================
+.pylintrc.local
+.mypy_cache/
+.ruff_cache/
+
+# ==================== Dados do projeto ====================
+# Imagens originais e processadas não vão pro repositório (dataset costuma ser grande/pesado)
+data/raw/*
+data/custom/*
+!data/raw/.gitkeep
+!data/custom/.gitkeep
+
+# Relatórios gerados pelo processamento
+data/image_mapping.json
+data/image_mapping.csv
+
+# ==================== Modelos YOLO / pesos treinados ====================
+*.pt
+*.onnx
+*.engine
+runs/
+
+# ==================== Jupyter ====================
+.ipynb_checkpoints/
+
+# ==================== Sistema operacional ====================
+.DS_Store
+Thumbs.db
+
+# ==================== Logs ====================
+*.log
