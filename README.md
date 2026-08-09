@@ -1,4 +1,3 @@
-
 # splitDataset
 
 Ferramenta para organizar datasets de imagens classificadas: renomeia os arquivos com o padrão `data_hora_id`, copia para uma pasta de saída padronizada e gera um mapeamento completo em JSON e CSV.
@@ -50,11 +49,22 @@ pip install tqdm python-dotenv
 Crie um arquivo `.env` na raiz do projeto (opcional — há valores padrão para tudo):
 
 ```env
+# Configurações do ImageProcessor
 INPUT_DIR=data/raw
 OUTPUT_DIR=data/custom
 MAPPING_DIR=data
+
+# Extensões suportadas (separadas por vírgula)
 SUPPORTED_EXTENSIONS=.jpg,.jpeg,.png,.bmp,.tiff,.webp,.gif
+
+# Configurações de logging
 LOG_LEVEL=INFO
+
+# Configurações do splitamento e seed para reprodução
+SPLIT_TRAIN_RATIO=0.70
+SPLIT_VAL_RATIO=0.15
+SPLIT_TEST_RATIO=0.15
+SPLIT_SEED=42
 ```
 
 ## Uso
